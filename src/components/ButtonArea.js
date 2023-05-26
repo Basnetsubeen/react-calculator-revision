@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./Button";
 
-const ButtonArea = () => {
+const ButtonArea = ({ handleOnChange }) => {
   const buttonArg = [
     {
       clsm: "btn-ac",
@@ -80,7 +80,7 @@ const ButtonArea = () => {
     <>
       {buttonArg.map((item, i) => {
         // return <Button clsm={item.clsm} label={item.label} key={i} />
-        return <Button {...item} key={i} />;
+        return <Button handleOnChange={handleOnChange} {...item} key={i} />;
       })}
     </>
   );
